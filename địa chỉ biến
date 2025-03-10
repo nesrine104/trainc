@@ -1,0 +1,22 @@
+#include<stdio.h>
+#include<stdint.h>
+
+int main()
+{
+    int a=-10;
+    float b=2.5;
+    char c='A';
+    short d=29;
+    long long e=40000;
+    double f=23473;
+    unsigned int g=324;
+    unsigned char h='Y';
+    printf("a cach b %ld bytes\n", (uintptr_t)&a-(uintptr_t)&b);
+    printf("b cach c %ld bytes\n", (uintptr_t)&b-(uintptr_t)&c);
+    printf("c cach d %ld bytes\n", (uintptr_t)&c-(uintptr_t)&d);
+    printf("d cach e %ld bytes\n", (uintptr_t)&d-(uintptr_t)&e);
+    printf("e cach f %ld bytes\n", (uintptr_t)&e-(uintptr_t)&f);
+    printf("f cach g %ld bytes\n", (uintptr_t)&f-(uintptr_t)&g);
+    printf("g cach h %ld bytes", (uintptr_t)&g-(uintptr_t)&h);
+    return 0;
+}
